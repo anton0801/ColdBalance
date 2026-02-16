@@ -9,6 +9,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Auth.auth().signInAnonymously()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didActivate), name: UIApplication.didBecomeActiveNotification, object: nil)
+        
+        return true
+    }
+    
+    @objc private func didActivate() {
         if #available(iOS 14, *) {
             // AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
             ATTrackingManager.requestTrackingAuthorization { status in
@@ -20,17 +26,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             // AppsFlyerLib.shared().start()
         }
-        return true
     }
+    
 }
 
 @main
 struct IceBalanceApp: App {
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var balanceViewModel = BalanceViewModel()
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var showSplash = true
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
         setupAppearance()
