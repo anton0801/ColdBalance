@@ -47,7 +47,7 @@ struct SplashView: View {
                 
                 // App name
                 VStack(spacing: 4) {
-                    Text("Ice Balance")
+                    Text("Cold Balance")
                         .font(.system(size: 32, weight: .bold, design: .rounded))
                         .foregroundColor(Theme.primaryText)
                     

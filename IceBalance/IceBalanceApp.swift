@@ -1,16 +1,38 @@
 import SwiftUI
 import Firebase
 import FirebaseAuth
+import AppTrackingTransparency
+import AppsFlyerLib
+
+final class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        Auth.auth().signInAnonymously()
+        
+        if #available(iOS 14, *) {
+            // AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
+            ATTrackingManager.requestTrackingAuthorization { status in
+                DispatchQueue.main.async {
+                    // AppsFlyerLib.shared().start()
+                    UserDefaults.standard.set(status.rawValue, forKey: "att_status")
+                }
+            }
+        } else {
+            // AppsFlyerLib.shared().start()
+        }
+        return true
+    }
+}
 
 @main
 struct IceBalanceApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var balanceViewModel = BalanceViewModel()
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var showSplash = true
     
     init() {
-        FirebaseApp.configure()
-        Auth.auth().signInAnonymously()
         setupAppearance()
     }
     
