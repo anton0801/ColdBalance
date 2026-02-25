@@ -8,11 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		8FB607092F434E9000BDE229 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB607082F434E9000BDE229 /* AppsFlyerLib */; };
+		8FB608152F45D2FD00BDE229 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB608142F45D2FD00BDE229 /* FirebaseMessaging */; };
+		8FB608232F45E24300BDE229 /* ColdBalanceAppExt.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8FB6081C2F45E24300BDE229 /* ColdBalanceAppExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8FB6082A2F45E26D00BDE229 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB608292F45E26D00BDE229 /* FirebaseMessaging */; };
 		8FEFD1CA2F1A784800ED4750 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEFD1C92F1A784800ED4750 /* FirebaseAuth */; };
 		8FEFD1CC2F1A784800ED4750 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEFD1CB2F1A784800ED4750 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8FB608212F45E24300BDE229 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FEFD1712F1A73B200ED4750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FB6081B2F45E24300BDE229;
+			remoteInfo = ColdBalanceAppExt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FB608282F45E24300BDE229 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8FB608232F45E24300BDE229 /* ColdBalanceAppExt.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8FB6081C2F45E24300BDE229 /* ColdBalanceAppExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ColdBalanceAppExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEFD1792F1A73B200ED4750 /* IceBalance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceBalance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -24,9 +52,24 @@
 			);
 			target = 8FEFD1782F1A73B200ED4750 /* IceBalance */;
 		};
+		8FB608272F45E24300BDE229 /* Exceptions for "ColdBalanceAppExt" folder in "ColdBalanceAppExt" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8FB6081B2F45E24300BDE229 /* ColdBalanceAppExt */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8FB6081D2F45E24300BDE229 /* ColdBalanceAppExt */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8FB608272F45E24300BDE229 /* Exceptions for "ColdBalanceAppExt" folder in "ColdBalanceAppExt" target */,
+			);
+			path = ColdBalanceAppExt;
+			sourceTree = "<group>";
+		};
 		8FEFD17B2F1A73B200ED4750 /* IceBalance */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -38,10 +81,19 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8FB608192F45E24300BDE229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB6082A2F45E26D00BDE229 /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FEFD1762F1A73B200ED4750 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB608152F45D2FD00BDE229 /* FirebaseMessaging in Frameworks */,
 				8FEFD1CC2F1A784800ED4750 /* FirebaseDatabase in Frameworks */,
 				8FEFD1CA2F1A784800ED4750 /* FirebaseAuth in Frameworks */,
 				8FB607092F434E9000BDE229 /* AppsFlyerLib in Frameworks */,
@@ -51,10 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FB608132F45D2FD00BDE229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8FEFD1702F1A73B200ED4750 = {
 			isa = PBXGroup;
 			children = (
 				8FEFD17B2F1A73B200ED4750 /* IceBalance */,
+				8FB6081D2F45E24300BDE229 /* ColdBalanceAppExt */,
+				8FB608132F45D2FD00BDE229 /* Frameworks */,
 				8FEFD17A2F1A73B200ED4750 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8FEFD1792F1A73B200ED4750 /* IceBalance.app */,
+				8FB6081C2F45E24300BDE229 /* ColdBalanceAppExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +132,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8FB6081B2F45E24300BDE229 /* ColdBalanceAppExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB608242F45E24300BDE229 /* Build configuration list for PBXNativeTarget "ColdBalanceAppExt" */;
+			buildPhases = (
+				8FB608182F45E24300BDE229 /* Sources */,
+				8FB608192F45E24300BDE229 /* Frameworks */,
+				8FB6081A2F45E24300BDE229 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8FB6081D2F45E24300BDE229 /* ColdBalanceAppExt */,
+			);
+			name = ColdBalanceAppExt;
+			packageProductDependencies = (
+				8FB608292F45E26D00BDE229 /* FirebaseMessaging */,
+			);
+			productName = ColdBalanceAppExt;
+			productReference = 8FB6081C2F45E24300BDE229 /* ColdBalanceAppExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8FEFD1782F1A73B200ED4750 /* IceBalance */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FEFD1852F1A73B400ED4750 /* Build configuration list for PBXNativeTarget "IceBalance" */;
@@ -77,10 +162,12 @@
 				8FEFD1752F1A73B200ED4750 /* Sources */,
 				8FEFD1762F1A73B200ED4750 /* Frameworks */,
 				8FEFD1772F1A73B200ED4750 /* Resources */,
+				8FB608282F45E24300BDE229 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8FB608222F45E24300BDE229 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8FEFD17B2F1A73B200ED4750 /* IceBalance */,
@@ -90,6 +177,7 @@
 				8FEFD1C92F1A784800ED4750 /* FirebaseAuth */,
 				8FEFD1CB2F1A784800ED4750 /* FirebaseDatabase */,
 				8FB607082F434E9000BDE229 /* AppsFlyerLib */,
+				8FB608142F45D2FD00BDE229 /* FirebaseMessaging */,
 			);
 			productName = IceBalance;
 			productReference = 8FEFD1792F1A73B200ED4750 /* IceBalance.app */;
@@ -105,6 +193,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					8FB6081B2F45E24300BDE229 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					8FEFD1782F1A73B200ED4750 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -129,11 +220,19 @@
 			projectRoot = "";
 			targets = (
 				8FEFD1782F1A73B200ED4750 /* IceBalance */,
+				8FB6081B2F45E24300BDE229 /* ColdBalanceAppExt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8FB6081A2F45E24300BDE229 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FEFD1772F1A73B200ED4750 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,6 +243,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8FB608182F45E24300BDE229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8FEFD1752F1A73B200ED4750 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,7 +259,76 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8FB608222F45E24300BDE229 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FB6081B2F45E24300BDE229 /* ColdBalanceAppExt */;
+			targetProxy = 8FB608212F45E24300BDE229 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8FB608252F45E24300BDE229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColdBalanceAppExt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ColdBalanceAppExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.balanceapp.ColdBalance.ColdBalanceAppExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8FB608262F45E24300BDE229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ColdBalanceAppExt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ColdBalanceAppExt;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.balanceapp.ColdBalance.ColdBalanceAppExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8FEFD1832F1A73B400ED4750 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,7 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.10.0;
+				MARKETING_VERSION = 1.20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.balanceapp.ColdBalance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -340,7 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.10.0;
+				MARKETING_VERSION = 1.20.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.balanceapp.ColdBalance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -357,6 +532,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8FB608242F45E24300BDE229 /* Build configuration list for PBXNativeTarget "ColdBalanceAppExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB608252F45E24300BDE229 /* Debug */,
+				8FB608262F45E24300BDE229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8FEFD1742F1A73B200ED4750 /* Build configuration list for PBXProject "IceBalance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -401,6 +585,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8FB607072F434E9000BDE229 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
 			productName = AppsFlyerLib;
+		};
+		8FB608142F45D2FD00BDE229 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FEFD1C82F1A784800ED4750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8FB608292F45E26D00BDE229 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FEFD1C82F1A784800ED4750 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		8FEFD1C92F1A784800ED4750 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
